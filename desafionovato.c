@@ -85,7 +85,7 @@ int main() {
 if (totalTerritorios!= 0) {
           // lista de territorios cadastrados
           printf("========================================\n");
-          printf("   --- LISTA DE TERRITÓRIOS ---         \n");
+          printf("   --- MAPA MUNDO ATUAL ---         \n");
           printf("========================================\n");
           for(int i = 0; i < totalTerritorios; i++) {
             printf("Território %d:\n", i + 1);
