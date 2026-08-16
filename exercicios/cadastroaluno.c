@@ -14,7 +14,7 @@ int main(){
     int posição=-1;
     char busca[200];
 
-Aluno aluno_nota[3];
+Aluno aluno_nota[10];
 
 // inicializando o array de struct
 for( i=0;i<10;i++){
@@ -27,11 +27,11 @@ for( i=0;i<10;i++){
 
 for(i=0;i<10;i++){
     printf("Digite o nome do aluno : ");      
-    scanf(" %s%*c",  aluno_nota[i].nome);
+    scanf(" %s%*c", &aluno_nota[i].nome);
     printf("Digite a disciplina do aluno : ");
-    scanf(" %s%*c",  aluno_nota[i].disciplina);
+    scanf(" %s%*c",  &aluno_nota[i].disciplina);
     printf("Digite a nota do aluno : ");
-    scanf("%f%*c",  aluno_nota[i].nota);
+    scanf("%f%*c", &aluno_nota[i].nota);
 }
     //imprimindo array sstruct
     //printf("\n texto %_",nome_vetor_struct[indice].nome_menbro_struct);
@@ -44,11 +44,12 @@ for(i=0;i<10;i++){
     }
     // buscar elemento no array de struct
     printf("\n Digite um nome: ");
-    scanf(" %s%*c",aluno_nota[i].nome);
+    scanf(" %s%*c",busca);
 for(i=0;i<10;i++){
     if(strcmp(busca, aluno_nota[i].nome)==0){
-       printf("\n Regsitro encontrado: ");
-       posição =i;  
+       printf("\n Registro encontrado: ");
+       posição =i; 
+       break; 
     }
     else{
         posição = -1;
